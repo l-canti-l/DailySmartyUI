@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Logo from "./logo";
-import Searchbar from "./searchbar";
+import SearchBar from "./searchbar";
 import RecentPosts from "./recent-posts";
 
 export default class App extends Component {
@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <Logo />
-        <Searchbar />
+        <SearchBar />
         <RecentPosts />
       </div>
     );
