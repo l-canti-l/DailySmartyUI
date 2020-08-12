@@ -3,11 +3,12 @@ import Logo from "./logo";
 
 class Results extends Component {
   render() {
-    <div>
+    return (
+      <div>
         <h1>Results</h1>
         <Logo />
-    </div>
+      </div>
+    );
   }
 }
-
 export default Results;
