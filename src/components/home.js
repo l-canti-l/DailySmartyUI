@@ -17,13 +17,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+        <div className="home">
           <Logo />
           <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)} />
           <RecentPosts />
         </div>
-      </div>
     );
   }
 }
