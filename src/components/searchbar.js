@@ -10,7 +10,11 @@ class SearchBar extends Component {
 
   renderInput(field) {
     return (
-      <input type="text" placeholder="Search DailySmarty" {...field.input} />
+      <input
+        type="text"
+        placeholder="&#xf002; Search DailySmarty"
+        {...field.input}
+      />
     );
   }
 
@@ -18,14 +22,16 @@ class SearchBar extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-          <div className="search-bar__wrapper">
-              <Field name="query" component={this.renderInput}/>
-              <p>Press return to search</p>
-          </div>
+      <form
+        className="search-bar"
+        onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}
+      >
+        <div className="search-bar__wrapper">
+          <Field name="query" component={this.renderInput} />
+          <p>Press return to search</p>
+        </div>
       </form>
-  )
-    
+    );
   }
 }
 
