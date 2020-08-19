@@ -40,9 +40,29 @@
         color: $color-gray-one;
         font-size: 18px;
         line-height: 22px;
+        text-decoration: none;
     }
 
     .result-post__links {
+        
+    }
+}
 
+.post-link {
+    min-height: 70px;
+    display: flex;
+    color: $color-gray-three;
+    
+    .post-link__box {
+        min-width: 70px;
+        background-color: $color-gray-two;
+        margin-right: 60px;
+    }
+
+    .post-link__link a {
+        text-decoration: none;
+        color: $color-gray-one;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
