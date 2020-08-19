@@ -5,7 +5,7 @@
 
     .recent-posts__wrapper {
         display: grid;
-        grid-row-gap: 21px;
+        row-gap: 21px;
         width: 100%;
 
         .recent-posts__heading {
@@ -16,7 +16,7 @@
             display: grid;
             justify-content: space-evenly;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 42px;
+            row-gap: 42px;
         }    
     }
 }
