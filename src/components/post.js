@@ -18,13 +18,35 @@ class Post extends Component {
         return topics;
     }
 
+    getNameForPostLink(url) {
+        var lastSlash = url.lastIndexOf('/');
+        var formattedURL = url.substring((lastSlash + 1), url.length);
+
+        if((lastSlash+1) == url.length) {
+            formattedURL = url.slice(0, lastSlash);
+            lastSlash = formattedURL.lastIndexOf('/');
+            formattedURL = url.substring(lastSlash+1, url.length - 1);
+        }
+
+        if(formattedURL.includes('.html')) {
+            formattedURL = formattedURL.substring(0, formattedURL.length -5);
+        }
+
+        if(formattedURL.includes('.htm')) {
+            formattedURL = formattedURL.substring(0, formattedURL.length - 4);
+        }
+
+
+        return formattedURL.replace(/-/g, ' ');
+    }
+
     renderLinks() {
         let links = this.props.post_links.map((post_link, index) => {
             return (
                 <div className="post-link" key={index}>
                     <div className="post-link__box"></div>
                     <div className="post-link__link">
-                        <a href={post_link.link_url}>Useful Link #{index + 1}</a>
+                        <a href={post_link.link_url}>{this.getNameForPostLink(post_link.link_url)}</a>
                     </div>
                 </div>
             )
